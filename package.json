@@ -1,0 +1,20 @@
+{
+  "name": "template-project",
+  "version": "1.0.0",
+  "description": "* gulp\r * gulp-sass\r * bootstrap\r * index.html\r * phpmailer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://lhdeveloper.visualstudio.com/_git/template-project"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}

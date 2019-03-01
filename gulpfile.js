@@ -9,14 +9,13 @@ let gulp = require('gulp'),
     }
 
 // sass compile
-gulp.task('sass', function () {
+function sassExport(){
     return gulp.src('./src/scss/**/structure.scss')
         .pipe(sass())
         .on('error', swallowError)
         .pipe(gulp.dest('./dist/css'));
-});
-
+}
 // watch-sass
 gulp.task('watch-css', function () {
-    gulp.watch('./src/scss/**/structure.scss', ['sass']);
+    gulp.watch('./src/scss/**/structure.scss', gulp.series(sassExport));
 });

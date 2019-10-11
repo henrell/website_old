@@ -66,3 +66,7 @@ options = {
 };
 
 $('input[name=telefone]').mask(behavior, options);
+
+var date = new Date();
+var currentYear = date.getFullYear();
+$('.current-year').text(currentYear);

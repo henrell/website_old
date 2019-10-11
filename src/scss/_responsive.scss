@@ -1,5 +1,190 @@
-@media screen and (max-width:996px){
-    .container-centralizado {
-        margin-top:30vh;
+@media screen and (min-width: 992px){
+    //header
+    header {
+        &.fixed {
+            position: fixed;
+            top:0;
+            left: 0;
+            width: 100%;
+            z-index: 20;
+            
+            .navbar {
+                background: #FFF!important;
+                transition: all 0.2s;
+                -webkit-transition: all 0.2s;
+                -o-transition: all 0.2s;
+                -moz-transition: all 0.2s;
+                box-shadow: 2px 2px 50px #222222;
+            }
+        }
+    }
+    //navbar
+    .navbar {
+        top:2.5em;
+        padding: 0px;
+        #navbarNav {
+            margin-top: 0em;
+            .navbar-nav {
+                .nav-item {
+                    position: relative;
+                    padding-top:2em;
+                    font-size:1.4em;
+                    transition: all 0.2s;
+                    -webkit-transition: all 0.2s;
+                    -o-transition: all 0.2s;
+                    -moz-transition: all 0.2s;
+                    &.active{
+                        background-color: $secondary;
+                        .nav-link {
+                            color:#FFF!important;
+                        }
+                    }
+                    &:hover {
+                        &:after{
+                            content: '';
+                            display: block;
+                            width:100%;
+                            height: .2em;
+                            background: $secondary;
+                            position: absolute;
+                            bottom:0px;
+                            left:0px;
+                        }
+                    }
+
+                    .nav-link {
+                        color:$primary!important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px){
+    header {
+        position: fixed;
+        z-index: 200;
+    }
+
+    .navbar {
+        &.bg-transparent{
+            background: $primary!important;
+        }
+        .navbar-nav {
+            margin-top:1em;
+            .nav-item {
+                .nav-link {
+                    color:#FFF!important;
+                }
+                &.active {
+                    color:$secondary!important;
+                }
+            }
+        }
+
+        //logo
+        .navbar-brand {
+            img {
+                width:80px;
+            }
+        }
+
+        //botao menu mobile
+        .navbar-toggler {
+            border-color: $secondary!important;
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 192, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }
+        }
+    }
+
+    //main
+    main {
+         //banner
+         section {
+             padding-top:5em;
+
+             h2 {
+                 font-size:2em;
+                 margin-bottom:1.5em;
+             }
+         }
+         #banner {
+            height:40vh;
+            margin-top: 12vh;
+
+            img {
+                object-fit: cover;
+                height:100%;
+            }
+
+            .carousel-indicators {
+                bottom:20px;
+                li {
+                    padding:.2em .4em;
+                }
+            }
+        }
+
+        //sobre 
+        #sobre {
+            padding-bottom:2em;
+            .text-sobre {
+                order:-1;
+                margin-bottom:1em;
+            }
+
+            img {
+                max-width: 100%;
+            }
+            &::after{
+                bottom:-55em;
+            }
+
+            .link-cardapio {
+                margin-top: 2em;
+            }
+
+            .bg-custom {
+                background-image: none;
+                background-color: $secondary;
+                font-size: 1em;
+                padding:.5em!important;
+                margin-bottom:2em; 
+
+            }
+        }
+
+        //delivery
+        #delivery {
+            padding-bottom: 10em;
+        }
+        .bt-ifood {
+            font-size:1em;
+            position: absolute;
+            right:0px;
+            bottom:-100px;
+            img {
+                width: 100px;
+            }
+            &:before {
+                height:69px;
+                left:-43px;
+                width: 86px;
+            }
+        }
+
+        //contato
+        #contato {
+            .endereco{
+                margin-top:2em;
+            }
+        }
+    }
+
+    //footer
+    footer {
+        font-size:.8em;
     }
 }

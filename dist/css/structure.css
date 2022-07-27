@@ -7169,6 +7169,8 @@ footer {
   .navbar {
     display: flex;
     justify-content: end; }
+    .navbar .navbar-collapse.show {
+      background-color: #df2935 !important; }
     .navbar button.navbar-toggler {
       background: #df2935; }
       .navbar button.navbar-toggler:focus {

@@ -61,4 +61,4 @@ typings/
 .next
 
 # ignorando pasta SRC
-src
+src/

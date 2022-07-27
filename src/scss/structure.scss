@@ -26,6 +26,19 @@ a {
     }
 }
 
+header {
+    .navbar {
+        .navbar-nav {
+            .nav-item {
+
+                text-transform: uppercase;
+                font-weight   : $font-bold;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
+
 main {
     section {
         .picture {
@@ -38,10 +51,11 @@ main {
         &#banner {
             position: relative;
             overflow: hidden;
+            height  : 100vh;
 
             .bg-image {
                 background-image     : url('../images/banner.jpg');
-                background-position  : left top;
+                background-position  : center top;
                 background-repeat    : no-repeat;
                 background-attachment: fixed;
                 position             : absolute;

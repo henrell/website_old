@@ -7082,9 +7082,6 @@ main section#banner {
     main section#banner .container img {
       max-width: 90%; }
 
-main section#music .picture {
-  order: -1; }
-
 main section#contact {
   background-color: #df2935; }
   main section#contact a {
@@ -7173,10 +7170,14 @@ footer {
         outline: none !important; }
       .navbar button.navbar-toggler .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(223,41,53, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
-  main section#banner {
-    height: 30vh; }
-  main .picture {
-    padding: 0px;
-    overflow: hidden; }
-    main .picture img {
-      width: 100vw; } }
+  main {
+    padding-top: 3em; }
+    main section#banner {
+      height: 20vh; }
+    main section#music .picture {
+      order: -1; }
+    main .picture {
+      padding: 0px;
+      overflow: hidden; }
+      main .picture img {
+        width: 100vw; } }

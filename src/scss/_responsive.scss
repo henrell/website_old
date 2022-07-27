@@ -105,6 +105,12 @@
             &#banner {
                 height: 30vh;
             }
+
+            &#music {
+                .picture {
+                    order: -1
+                }
+            }
         }
 
         .picture {

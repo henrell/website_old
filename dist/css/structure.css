@@ -7099,7 +7099,8 @@ main section#contact {
         background: white; }
 
 main .content {
-  padding: 3em 3em; }
+  padding-top: 3em;
+  padding-bottom: 2em; }
   main .content h2 {
     font-size: 3em;
     margin-bottom: .5em;
@@ -7157,7 +7158,9 @@ footer {
     main .picture img {
       height: 100vh;
       object-fit: cover;
-      width: 100%; } }
+      width: 100%; }
+  main .content {
+    padding: 3em 3em; } }
 
 @media screen and (max-width: 996px) {
   .navbar {
@@ -7174,6 +7177,8 @@ footer {
     padding-top: 3em; }
     main section#banner {
       height: 20vh; }
+    main section#release .row, main section#music .row {
+      margin: 0px; }
     main section#music .picture {
       order: -1; }
     main .picture {

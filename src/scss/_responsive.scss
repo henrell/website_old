@@ -61,7 +61,6 @@
 
     main {
         section {
-
             height  : 100vh;
             overflow: hidden;
         }
@@ -74,6 +73,10 @@
                 object-fit: cover;
                 width     : 100%;
             }
+        }
+
+        .content {
+            padding: 3em 3em;
         }
     }
 }
@@ -105,6 +108,13 @@
         section {
             &#banner {
                 height: 20vh;
+            }
+
+            &#release,
+            &#music {
+                .row {
+                    margin: 0px;
+                }
             }
 
             &#music {

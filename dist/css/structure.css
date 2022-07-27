@@ -7047,8 +7047,7 @@ main section .picture img {
 
 main section#banner {
   position: relative;
-  overflow: hidden;
-  height: 30vh; }
+  overflow: hidden; }
   main section#banner .bg-image {
     background-image: url("../images/banner.jpg");
     background-position: left top;
@@ -7174,6 +7173,8 @@ footer {
         outline: none !important; }
       .navbar button.navbar-toggler .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(223,41,53, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+  main section#banner {
+    height: 30vh; }
   main .picture {
     padding: 0px;
     overflow: hidden; }

@@ -83,6 +83,12 @@
         display        : flex;
         justify-content: end;
 
+        .navbar-collapse {
+            &.show {
+                background-color: $tertiary !important;
+            }
+        }
+
         button {
             &.navbar-toggler {
                 background: $tertiary;

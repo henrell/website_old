@@ -5,9 +5,9 @@ new WOW().init();
 var $document = $(document),
     className = 'fixed';
 
-$document.scroll(function() {
-    if(window.innerWidth > 922){
-        if ($document.scrollTop() >= 00) {
+$document.scroll(function () {
+    if (window.innerWidth > 922) {
+        if ($document.scrollTop() >= 100) {
             // user scrolled 50 pixels or more;
             // do stuff
             $('header').addClass(className);
@@ -22,7 +22,8 @@ document.querySelectorAll('#navbarNav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         $('#navbarNav').find('li').removeClass('active');
-        $(document.querySelector(this.getAttribute('href'))).css('paddingTop','0px')
+        $('.navbar-collapse').collapse('hide');
+        $(document.querySelector(this.getAttribute('href'))).css('paddingTop', '0px')
 
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth',
@@ -30,9 +31,8 @@ document.querySelectorAll('#navbarNav a[href^="#"]').forEach(anchor => {
         });
 
         $(this).parent().addClass('active');
-        debugger
-        if(document.querySelector(this.getAttribute('href')).id != 'inicio'){
-            $(document.querySelector(this.getAttribute('href'))).css('paddingTop','190px')
+        if (document.querySelector(this.getAttribute('href')).id != 'inicio') {
+            $(document.querySelector(this.getAttribute('href'))).css('paddingTop', '0px')
         }
     });
 });
@@ -59,11 +59,11 @@ if ($('#back-to-top, #home').length) {
 var behavior = function (val) {
     return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
 },
-options = {
-    onKeyPress: function (val, e, field, options) {
-        field.mask(behavior.apply({}, arguments), options);
-    }
-};
+    options = {
+        onKeyPress: function (val, e, field, options) {
+            field.mask(behavior.apply({}, arguments), options);
+        }
+    };
 
 $('input[name=telefone]').mask(behavior, options);
 

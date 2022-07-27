@@ -1,15 +1,15 @@
 let gulp = require('gulp'),
     sass = require('gulp-sass');
 
-    function swallowError (error) {
+function swallowError(error) {
     // If you want details of the error in the console
-        console.log(error.toString())
+    console.log(error.toString())
 
-        this.emit('end')
-    }
+    this.emit('end')
+}
 
 // sass compile
-function sassExport(){
+function sassExport() {
     return gulp.src('./src/scss/**/structure.scss')
         .pipe(sass())
         .on('error', swallowError)
@@ -17,5 +17,5 @@ function sassExport(){
 }
 // watch-sass
 gulp.task('watch-css', function () {
-    gulp.watch('./src/scss/**/structure.scss', gulp.series(sassExport));
+    gulp.watch('./src/scss/**/*.scss', gulp.series(sassExport));
 });

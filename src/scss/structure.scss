@@ -3,21 +3,139 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 
 body {
-    font-family: $font-family;
-    font-size:16px;
-    color:#000;
-    background: #f1f1f2;
+    font-family            : $font-family;
+    font-size              : 18px;
+    font-weight            : $font-light;
+    line-height            : 32px;
+    color                  : $text;
+    background             : $primary;
+    -webkit-font-smoothing : antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-    transition: all 0.3s;
-    -webkit-transition:all 0.3s;
-    -o-transition:all 0.3s;
-    -moz-transition: all 0.3s;
+    transition        : all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition     : all 0.3s;
+    -moz-transition   : all 0.3s;
+    color             : $tertiary;
 
     &:hover {
         text-decoration: none;
+        color          : $secondary;
     }
+}
+
+main {
+    section {
+        .picture {
+            img {
+                object-fit: cover;
+                width     : 100%;
+            }
+        }
+
+        &#banner {
+            position: relative;
+            overflow: hidden;
+            height  : 30vh;
+
+            .bg-image {
+                background-image     : url('../images/banner.jpg');
+                background-position  : left top;
+                background-repeat    : no-repeat;
+                background-attachment: fixed;
+                position             : absolute;
+                width                : 100%;
+                height               : 100%;
+                z-index              : 1;
+                opacity              : .2;
+
+                &:before {
+                    content   : '';
+                    display   : block;
+                    width     : 100%;
+                    height    : 100%;
+                    position  : absolute;
+                    top       : 0px;
+                    left      : 0px;
+                    z-index   : 2;
+                    background: url('../images/overlay.png') repeat;
+                    opacity   : .8;
+                }
+            }
+
+            .container {
+                position       : absolute;
+                z-index        : 2;
+                width          : 100%;
+                top            : 50%;
+                left           : 50%;
+                transform      : translate(-50%, -50%);
+                display        : flex;
+                align-items    : center;
+                justify-content: center;
+
+                img {
+                    max-width: 90%;
+                }
+            }
+        }
+
+        &#music {
+            .picture {
+                order: -1
+            }
+        }
+
+        &#contact {
+            background-color: $tertiary;
+
+            a {
+                color: $primary;
+
+                &:hover {
+                    color: white;
+                }
+            }
+
+            .socials {
+                font-size: 1.2em;
+
+                a {
+                    background   : $primary;
+                    color        : $tertiary;
+                    margin       : 5px;
+                    border-radius: 10px;
+
+                    &:hover {
+                        background: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        padding: 3em 3em;
+
+        h2 {
+            font-size     : 3em;
+            margin-bottom : .5em;
+            text-transform: uppercase;
+            color         : $tertiary;
+            font-weight   : $font-bold;
+        }
+
+        h3 {
+            font-weight: bold;
+        }
+    }
+}
+
+footer {
+    font-size: .7em;
+    color    : white;
 }
 
 //responsive

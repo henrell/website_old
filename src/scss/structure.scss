@@ -107,13 +107,20 @@ main {
             }
 
             .socials {
+
                 font-size: 1.2em;
 
                 a {
-                    background   : $primary;
-                    color        : $tertiary;
-                    margin       : 5px;
-                    border-radius: 10px;
+                    background     : $primary;
+                    color          : $tertiary;
+                    margin         : 5px;
+                    border-radius  : .3rem;
+                    padding        : 1em;
+                    width          : 20px;
+                    height         : 20px;
+                    display        : flex;
+                    justify-content: center;
+                    align-items    : center;
 
                     &:hover {
                         background: white;

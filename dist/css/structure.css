@@ -7088,6 +7088,16 @@ main section#banner {
     main section#banner .container img {
       max-width: 90%; }
 
+main section#cocovibes {
+  background-color: #000 !important;
+  height: auto;
+  padding-top: 5em !important;
+  background: url("../images/banner-cocovibes.png") no-repeat center;
+  background-size: 100%; }
+  main section#cocovibes .socials-cocovibes .nav-link i,
+  main section#cocovibes .socials-cocovibes .nav-link svg {
+    height: 2em; }
+
 main section#contact {
   background-color: #df2935; }
   main section#contact a {
@@ -7174,7 +7184,8 @@ footer {
 @media screen and (max-width: 996px) {
   .navbar {
     display: flex;
-    justify-content: end; }
+    justify-content: end;
+    padding: 1em; }
     .navbar .navbar-collapse.show {
       background-color: #df2935 !important; }
     .navbar button.navbar-toggler {
@@ -7187,6 +7198,14 @@ footer {
     margin: 0px; }
   main section#music .picture {
     order: -1; }
+  main section#cocovibes {
+    padding-top: 1em !important;
+    background-position: left;
+    background-size: cover; }
+    main section#cocovibes .content {
+      padding: 0em 3em; }
+    main section#cocovibes .socials-cocovibes {
+      justify-content: center; }
   main .picture {
     padding: 0px;
     overflow: hidden; }

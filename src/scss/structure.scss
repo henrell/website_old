@@ -95,6 +95,24 @@ main {
             }
         }
 
+        &#cocovibes {
+            background-color: #000 !important;
+            height          : auto;
+            padding-top     : 5em !important;
+            background      : url('../images/banner-cocovibes.png') no-repeat center;
+            background-size : 100%;
+
+            .socials-cocovibes {
+                .nav-link {
+
+                    i,
+                    svg {
+                        height: 2em;
+                    }
+                }
+            }
+        }
+
         &#contact {
             background-color: $tertiary;
 
